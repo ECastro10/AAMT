@@ -1,0 +1,381 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Key Signatures</h1>
+
+    <div class="lesson_wrapper">
+
+    <p>Remember how the clefs gave the reader context of where in the range lies?<br>
+        Let's take this a step further. Let's determine which notes are not wrong to play, meaning, that they will always<br>
+        fit, they may not sound that great, but they fit. <br>
+        <b>NOTES: There are only as many keys as there are notes.<br>
+        Outside of the key of C, keys have accidentals that are part of that key rather than the natural note, or both.<br>
+        We will be going through the keys in the circle of fifths fashion by first ascending<br>
+        up the sharps and then descending down the flats back to C.</b>
+    </p>
+    <p>
+        A <b>key</b> is basically the root, this means that everything will be related to the root in some way shape or form.<br>
+        That being said, the notes that are in a key are dictated by major scales. Take any key and find the major scale<br>
+        with the key as its root note and there are your notes which should line up with the key signature. Let's begin.
+    </p>
+
+    <div class="keys-wrapper">
+        <div class="key">
+    <h3>Key of C</h3>
+
+        <div id="key-of-C">
+
+            <img class="nat_img_size" src="{% static 'images/Csignature.jpg' %}">
+
+        </div>
+
+    <p>
+       <b>Key of C == 0 #'s, 0 b's<br>
+           <i>C - D - E - F - G - A - B</i></b>
+    </p>
+        <br>
+    </div>
+
+
+
+
+    <div class="key">
+    <h3>Key of G</h3>
+
+        <div id="key-of-G">
+
+            <img class="nat_img_size" src="{% static 'images/Gsignature.jpg' %}">
+
+        </div>
+
+    <p><b>Key of G == 1 #<br>
+        <i>G - A - B - C - D - E - F#</i></b>
+    </p>
+        <br>
+    </div>
+
+
+
+    <div class="key">
+    <h3>Key of D</h3>
+
+        <div id="key-of-D">
+
+            <img class="nat_img_size" src="{% static 'images/Dsignature.jpg' %}">
+
+        </div>
+
+    <p><b>Key of D == 2 #'s<br>
+        <i>D - E - F# - G - A - B - C#</i></b>
+    </p>
+        <br>
+    </div>
+
+
+
+    <div class="key">
+    <h3>Key of A</h3>
+
+        <div id="key-of-A">
+
+            <img class="nat_img_size" src="{% static 'images/Asignature.jpg' %}">
+
+        </div>
+
+    <p><b>Key of A == 3 #'s<br>
+        <i>A - B - C# - D - E - F# - G#</i></b>
+    </p>
+        <br>
+    </div>
+
+
+
+    <div class="key">
+    <h3>Key of E</h3>
+
+        <div id="key-of-E">
+
+            <img class="nat_img_size" src="{% static 'images/Esignature.jpg' %}">
+
+        </div>
+
+    <p><b>Key of E == 4 #'s<br>
+        <i>E - F# - G# - A - B - C# - D#</i></b>
+    </p>
+        <br>
+    </div>
+
+
+
+
+    </div>
+
+    <p>
+        <b>NOTE:</b>There are three sets of keys that are identical except for their context. That is to say<br>
+        if we continued this pattern it would look like this
+    </p>
+        <table id="sharps-flats-table">
+
+            <tr>
+                <th scope="col"><i>Sharp Keys</i></th>
+                <th scope="col"><i>Number of #'s</i></th>
+                <th scope="col"><i>Number of b's</i></th>
+                <th scope="col"><i>Flat Keys</i></th>
+            </tr>
+
+            <tr>
+                <th scope="row">C</th>
+                <th scope="row">0 #'s</th>
+            </tr>
+
+            <tr>
+                <th scope="row">G</th>
+                <th scope="row">1 #</th>
+            </tr>
+
+            <tr>
+                <th scope="row">D</th>
+                <th scope="row">2 #'s</th>
+            </tr>
+
+            <tr>
+                <th scope="row">A</th>
+                <th scope="row">3 #'s</th>
+            </tr>
+
+            <tr>
+                <th scope="row">E</th>
+                <th scope="row">4 #'s</th>
+            </tr>
+
+            <tr>
+                <th scope="row" class="B-Cb-chart">B</th>
+                <th scope="row" class="B-Cb-chart">5 #'s</th>
+                <th scope="row" class="B-Cb-chart">7 b's</th>
+                <th scope="row" class="B-Cb-chart">Cb</th>
+            </tr>
+
+            <tr id="same-key">
+                <th scope="row">F#</th>
+                <th scope="row">6 #'s</th>
+                <th scope="row">6 b's</th>
+                <th scope="row">Gb</th>
+            </tr>
+
+            <tr>
+                <th scope="row" class="Db-Csharp-chart">C#</th>
+                <th scope="row" class="Db-Csharp-chart">7 #'s</th>
+                <th scope="row" class="Db-Csharp-chart">5 b's</th>
+                <th scope="row" class="Db-Csharp-chart">Db</th>
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row">4 b's</th>
+                <th scope="row">Ab</th>
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row">3 b's</th>
+                <th scope="row">Eb</th>
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row">2 b's</th>
+                <th scope="row">Bb</th>
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row">1 b</th>
+                <th scope="row">F</th>
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row">0 b's</th>
+                <th scope="row">C</th>
+            </tr>
+
+        </table>
+
+        <p>
+            Like colors are the keys that have identical notes, just in different context. F# and Gb line up nicely<br>
+            but C# and Db, and B and Cb do not.
+        </p>
+
+
+
+    <div class="keys-wrapper">
+
+
+
+    <div class="keys">
+    <h3>Key of Cb/B</h3>
+
+        <div id="key-of-Cb-B">
+
+            <img class="nat_img_size" src="{% static 'images/Cb_Bsignature.jpg' %}">
+
+        </div>
+
+    <p>
+        <b>Key of Cb == 5 #'s<br>
+            Key of B == 7 b's<br>
+            <i>Cb - Db - Eb - Fb - Gb - Ab - Bb<br>
+                B - C# - D# - E - F# - G# - A#</i></b>
+    </p>
+    </div>
+        <br>
+
+
+
+    <div class="keys">
+    <h3>Key of F#/Gb</h3>
+
+        <div id="key-of-Fsharp-Gb">
+
+            <img class="nat_img_size" src="{% static 'images/F#_Gbsignature.jpg' %}">
+
+        </div>
+    <p>
+        <b>Key of F# == 6 #'s<br>
+            Key of Gb == 6 b's<br>
+            <i>F# - G# - A# - B - C# - D# - E#<br>
+            Gb - Ab - Bb - Cb - Db - Eb - F</i></b>
+    </p>
+        </div>
+        <br>
+
+
+
+    <div class="keys">
+    <h3>Key of C#/Db</h3>
+
+        <div id="key-of-Csharp-Db">
+
+            <img class="nat_img_size" src="{% static 'images/C#_Dbsignature.jpg' %}">
+
+        </div>
+
+    <p>
+        <b>Key of C# == 7 #'s<br>
+            Key of Db == 5 b's<br>
+            <i>C# - D# - E# - F# - G# - A# - B#<br>
+                Db - Eb - F - Gb - Ab - Bb - C</i></b>
+    </p>
+    </div>
+    <br>
+
+
+
+    <div class="keys">
+    <h3>Key of Ab</h3>
+
+        <div id="key-of-Ab">
+
+            <img class="nat_img_size" src="{% static 'images/Absignature.jpg' %}">
+
+        </div>
+
+    <p>
+        <b>Key of Ab == 4 b's<br>
+        <i>Ab - Bb - C - Db - Eb - F - G</i></b>
+    </p>
+    </div>
+        <br>
+
+
+
+
+    <div class="keys">
+    <h3>Key of Eb</h3>
+
+        <div id="key-of-Eb">
+
+            <img class="nat_img_size" src="{% static 'images/Ebsignature.jpg' %}">
+
+        </div>
+
+    <p>
+        <b>Key of Eb == 3 b's<br>
+        <i>Eb - F - G - Ab - Bb - C - D</i></b>
+    </p>
+    </div>
+        <br>
+
+
+
+    <div class="keys">
+    <h3>Key of Bb</h3>
+
+        <div id="key-of-Bb">
+
+            <img class="nat_img_size" src="{% static 'images/Bbsignature.jpg' %}">
+
+        </div>
+
+    <p>
+        <b>Key of Bb == 2 b's<br>
+        <i>Bb - C - D - Eb - F - G - A</i></b>
+    </p>
+    </div>
+        <br>
+
+
+
+        <div class="keys">
+    <h3>Key of F</h3>
+
+        <div id="key-of-F">
+
+            <img class="nat_img_size" src="{% static 'images/Fsignature.jpg' %}">
+
+        </div>
+
+    <p>
+        <b>Key of F == 1 b<br>
+        <i>F - G - A - Bb - C - D - E</i></b>
+    </p>
+    </div>
+        <br>
+
+
+
+    </div>
+
+    <div id="upright-circle-of-fifths">
+        <img class="nat_img_size" src="{% static 'images/circle_of_fifths_original.jpg' %}">
+    </div>
+
+    <p>If you want to go the circle of fourths route, just start from 0 b's and go up b's and down #'s.<br>
+        It is important to understand that <b>the reason it is either fourths or fifths is because of the relation<br>
+            between the current key and the next key.</b><br><br>
+        example: <b>C</b> - D - E - F - <b>G</b> - A - B<br>
+        Notice how if C == 1, G == 5 by simply counting up. Now look at the key of G.<br><br>
+        example: <b>G</b> - A - B - <b>C</b> - D - E - F#<br>
+        Notice how you only count up to four? This is the relation between the keys. Adjacent key's will be the fifth or fourth<br>
+        depending on the direction that you are going.
+    </p>
+    <p>
+        Practice writing these down over and over. You will start to notice a pattern that dictates which note is the new flat<br>
+        or sharp. Here is a little shortcut.<br><br>
+        <b><i>Order of Sharps:</i> F, C, G, D, A, E, B<br>
+            <i>Order of Flats:</i> B, E, A, D, G, C, F</b><br><br>
+        Think of the order as counters. In the key of G there is only 1 #, that is F whereas In the key of A<br>
+        there are 3 #'s  which happen to be F - C - G. Catching on?
+    </p>
+    </div>
+
+
+
+
+{% endblock %}

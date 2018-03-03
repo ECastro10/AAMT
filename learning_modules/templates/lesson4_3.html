@@ -1,0 +1,94 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Bar lines, Repeat Marks, and Time Signatures</h1>
+    
+    <div class="lesson_wrapper">
+
+    <h3>Bar lines</h3>
+    <div id="bars">
+    <img class="nat_img_size" src="{% static 'images/bars.png' %}">
+    </div>
+
+        <p>NOTE: <b>One "|" symbol means the end of a bar, two "|", == "||" means the end of the song.</b><br>
+            This helps the reader or writer understand where in the bar he/she is or whether the song should end or not.<br>
+            This brings us to the other marks on the staff, <b>repeat marks</b><br>
+        </p>
+
+        <h3>Repeat Marks</h3>
+            <div id="repeat_marks">
+                <img class="nat_img_size" src="{% static 'images/RepeatSigns.gif' %}">
+            </div>
+
+        <p>Anytime you are reading sheet music and you enter a solid | with a colon to the right this means that the following<br>
+            section will be repeated at the end repeat marks == : solid |<br>
+            This is useful if you want to play the same section with two endings. Here is an example.</p>
+
+            <div id="two_endings">
+                <img class="nat_img_size" src="{% static 'images/repeattwoendings.GIF' %}">
+            </div>
+
+            <p>So you would play the first two notes and on until the end repeat marks, then you repeat only the section inside<br>
+                the repeat marks. Having played through the first section you can just play the first two notes inside the repeat<br>
+                marks and then play the second ending, not the first ending section.</p>
+
+                <p>Here are a few other ways to show different kinds of repeats.<br>
+                    <b>NOTE: Each repeat mark has its place and time, think about which repeat mark bests fit the repeat that<br>
+                        you want.</b></p>
+        <div id="different_repeats">
+            <img class="nat_img_size" src="{% static 'images/typesofrepeatmarks.png' %}">
+        </div>
+        <br>
+
+        <h3>Time Signatures</h3>
+
+        <p>Let's discuss some time signatures and how to use them</p>
+
+        <div id="time_signatures">
+            <img class="nat_img_size" src="{% static 'images/Common_time_signatures.gif' %}">
+        </div>
+
+            <h3>4/4 time</h3>
+        <p>So in 4/4 time (aka common time), one bar is made up of four quarter beats. An auditory way of understanding this is<br>
+            to count out loud up to four and repeat. NOTE: <b>BOLD</b> text when showing how a time signature works<br>
+            means to put emphasis on that word, this is known as a <b>stressed beat.</b> You don't have to stress any beats if you don't want to.<br>
+            So you would count "<b>One</b> - Two - Three - Four | One - Two - Three - Four || <-- This is == 2 bars <br>
+            You can do this for as long as you like, the result is counting four beats per bar.<br>
+            I only stressed the first beat to show you where the bar begins, but you can stress any or all beats if you like.<br>
+            The note duration is important because it gives us a feel for what the time feels like. <br>
+            <b>4/4 time == 4 beats per bar/quarter note beats</b>
+        </p>
+
+    <h3>2/2 time</h3>
+        <p>2/2 time or c with a | through it == <b>cut time</b> should sound like this:<br>
+        One - Two | One - Two ||<br>
+        <b>2/2 time == 2 beats per bar/half note beats</b></p>
+
+    <h3>2/4 time</h3>
+        <p>One - Two | One - Two ||<br>
+        <b>2/4 == 2 beats per bar/quarter note beats</b><br>
+        It is important to note that even though my 2/2 and 2/4 examples look the same, the note durations differ.
+
+    <h3>3/4 time</h3>
+        <p>One - Two - Three | One - Two - Three<br>
+        <b>3/4 time == 3 beats per bar/quarter note beats</b></p>
+
+    <h3>6/8 time</h3>
+    <p>One - Two - Three - Four - Five - Six | One - Two - Three - Four - Five - Six ||<br>
+    <b>6/8 time == 6 beats per bar/eighth note beats</b></p>
+
+    <p>These are just a few time signatures that you can utilize, practice with a metronome to strengthen your sense of timing.<br>
+        Furthermore, practice stressing a specific beat in all bars to hear how it changes the way the music feels.<br>
+        Lastly, you will find different ways of counting time, by this I mean that you might not count one, two, ... six, instead<br>
+        you might count One and a Two and a, One etc.. Be open to learning and practice everyday.</p>
+
+
+    
+    
+    </div>
+
+
+
+
+{% endblock %}

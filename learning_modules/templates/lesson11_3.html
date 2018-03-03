@@ -1,0 +1,44 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Blues Scale</h1>
+    
+    <div class="lesson_wrapper">
+    
+    <p>
+        Now we reach the famous Blues Scale.<br>
+        The beauty of the blues scale is that it is identical to the minor pentatonic scale with one addition.<br>
+        The blues scale has an added note sometimes called the "blue note". This is simply a flat 5 == b5 or #4.<br>
+        So in the key of C, our A minor scale == A, C, D, E, G == 1, 3, 4, 5, 7<br>
+        We add a #4/b5 note to our existing scale which == 1, 3, 4, #4/b5, 5, 7 == A, C, D, Eb, E, G.<br>
+        <br>
+        <b>FORMULA: W+h, W, h, h, W+h, W</b><br><br>
+        This makes the original pentatonic minor scale into a hexatonic scale or 6 note scale.<br>
+        Since this scale only adds one note, we will not revisit the staff but instead focus on the pattern.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="blues-patter">
+            <img class="nat_img_size" src="{% static 'images/blues_pattern.jpeg' %}">
+        </div>
+    </div>
+
+    <p>
+        All the notes except the blue notes should not be new. <br>
+        So if we are just adding one note, why does it have a new color == blue?<br>
+        That is because the blue note is only played in passing, it is never a note that you end on because<br>
+        it does not sound good to end on. So when you practice this pattern try ending on that note and hear<br>
+        how it just doesn't sound right. Sure you can linger on that note, but you cannot end on it.<br>
+        Practice this scale as you would all the other ones.
+    </p>
+    
+    
+    
+    
+    </div>
+
+
+
+
+{% endblock %}

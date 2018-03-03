@@ -1,0 +1,67 @@
+#tuner_wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+#tuner{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 60%;
+    background-color: lightblue;
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+#credit{
+    display: flex;
+    justify-content: space-around;
+}
+
+.text_outside_button{
+    color: white;
+}
+
+#three_lights{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#three_symbols{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    padding: 5px;
+}
+
+.flat_sharp_or_zero{
+    height: 20px;
+    width: 20px;
+    color: gray;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bolder;
+
+}
+
+.lights{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: darkslategray;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.red-light{
+    background-color: red;
+}
+
+.green-light{
+    background-color: #46cd14;
+}

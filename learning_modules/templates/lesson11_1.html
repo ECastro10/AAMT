@@ -1,0 +1,73 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Major Pentatonic Scale</h1>
+    
+    <div class="lesson_wrapper">
+    
+    <p>
+        First and foremost, let's talk about what it means to be a pentatonic scale.
+    </p>
+
+    <h3>Pentatonic</h3>
+
+    <p>
+        So as you probably noticed, the major and minor scales had 7 notes before reaching the higher octave root.<br>
+        Those 7 note scales are known as <b>heptatonic scales.</b><br>
+        Now if you use the root of pentatonic == "penta", you can arrive at the conclusion that it means five notes.<br>
+        If you did not, penta means 5 (like the pentagon), and <b>pentatonic means 5 notes.</b><br>
+        The basic gist of pentatonic scales is to remove any neighboring tones or tones that are separated by a <br>
+        half step or semitone. Therefore we have two types of pentatonic scales, major and minor.<br>
+        Knowing that we only need 5 of the 7 notes in both the major and minor scales, let's move on to our first<br>
+        pentatonic scale.
+    </p>
+
+    <h3>Major Pentatonic Scale</h3>
+
+    <p>
+        Let's talk about the C major pentatonic scale.<br>
+        The reason we want to learn these 5 note scales is because by removing neighboring tones we remove a possibility<br>
+        of playing a dissonant note (the most dissonant note combinations are those that are only a semitone apart).<br>
+        Also, pentatonic scales are just about worldwide, many cultures have utilized the pentatonic scale, whether they<br>
+        called it that or not. It is just an easy go to when you don't know what notes to play.<br>
+        <br>
+        In the key of C we have the following notes: C, D, E, F, G, A, B<br>
+        We know that the two pairs of neighboring tones are E - F and B - C.<br><br>
+        <b>When making any major pentatonic scale, we remove the 4th and 7th scale degree from the original major scale.</b><br>
+        As a result we are left with 1, 2, 3, 5, 6 == C, D, E, G, A --> we removed the F and the C.
+        Therefore our formula looks like this:<br><br>
+        <b>FORMULA:W, W, W+h, W, W+h</b><br><br>
+        Here is what it looks like on a staff.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="c-major-pentatonic-scale-staff">
+            <img class="nat_img_size" src="{% static 'images/pentatonic-scale-c-major.jpg' %}">
+        </div>
+    </div>
+
+    <p>
+        Now let's look at a two octave pattern on our fretboard.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="c-major-pentatonic-scale-pattern">
+            <img class="nat_img_size" src="{% static 'images/major_pentatonic_pattern.jpeg' %}">
+        </div>
+    </div>
+
+    <p>
+        This scale should not be challenging except for the fact that you don't want to play the omitted notes.<br>
+        Other than that, practice it like you would all scales and listen to how two notes make a difference between<br>
+        the heptatonic and pentatonic scales.
+    </p>
+    
+    
+    
+    </div>
+
+
+
+
+{% endblock %}

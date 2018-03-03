@@ -1,0 +1,161 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Note Duration</h1>
+    
+    <div class="lesson_wrapper">
+    
+    <p>Okay so you know what a staff and clefs look like but what about the actual notes that go on the staff?<br>
+        Let's dive into note durations and what they look like, but before we do two things.<br>
+        One, note duration simply means, how long a note is played or how long you don't play a note.<br>
+        Secondly, from here on out we start to use simple math such as fractions.<br>
+        We will begin with a whole note and break it down to smaller bits.</p>
+
+    <h3>Whole Duration</h3>
+
+    <div class="note_types">
+        <div id="whole_note">
+            <img class="nat_img_size" src="{% static 'images/whole_note.jpg' %}">
+        </div>
+        <div id="whole_rest">
+            <img class="nat_img_size" src="{% static 'images/whole-rest-box.png' %}">
+        </div>
+    </div>
+
+    <p>This is a whole note, that means that it is played for four beats. You will find out more about beats and bars <br>
+        in the next lesson. All you have to know is that in a bar that goes like this<br>
+        One - Two - Three - Four<br>
+        The whole note is played at one and is sustained through the rest of the beats == 4 beat note<br>
+        Rests are breaks from playing any notes, that means that you would not play any note throughout the count 1-4<br>
+        <b>NOTE:</b> Whole notes are represented by a hollow <b>notehead</b>. Whole rests are rectangles above any line.</p>
+
+
+    <h3>Half Duration</h3>
+    <div class="note_types">
+        <div id="half_note">
+            <img class="nat_img_size" src="{% static 'images/half_note.jpg' %}">
+        </div>
+        <div id="half_rest">
+            <img class="nat_img_size" src="{% static 'images/half-rest-box.png' %}">
+        </div>
+    </div>
+
+    <p>Half notes are half the duration of whole notes<br>
+        Half rests are half the duration of whole rests.<br>
+        <b>Two half notes/rests == 1 whole note/rest</b><br>
+        <b>NOTE:</b> Notice how the half note simply has a <b>stem</b> added to the <b>notehead</b> and how the the rectangle<br>
+        is on the bottom vs the top for a half rest. Get used to these simple differences because they mean the world in music.</p>
+
+
+    <h3>Quarter Duration</h3>
+    <div class="note_types">
+        <div id="quarter_note">
+            <img class="nat_img_size" src="{% static 'images/quarter_note.jpg' %}">
+        </div>
+        <div id="quarter_rest">
+            <img class="nat_img_size" src="{% static 'images/quarter-rest-box3.jpg' %}">
+        </div>
+    </div>
+
+    <p>A quarter note is a quarter of the duration of a whole note.<br>
+        The rest is only a quarter of a whole rest. (Catching on to the pattern yet?)<br>
+        <b>2 quarter notes/rests == 1 half note/rest<br>
+            4 quarter notes/rests == 1 whole note/rest</b><br>
+        <b>NOTE:</b> The only visual difference in a quarter note is that the <b>notehead</b> is filled.</p>
+
+
+    <h3>Eighth Duration</h3>
+    <div class="note_types">
+        <div id="eighth_note">
+            <img class="nat_img_size" src="{% static 'images/eighthnote.jpg' %}">
+        </div>
+        <div id="eighth_rest">
+            <img class="nat_img_size" src="{% static 'images/eighth rest box.png' %}">
+        </div>
+    </div>
+
+    <p>An eighth note is an eighth of a whole note.<br>
+        The eighth rest is a quarter of a whole rest<br>
+        <b>2 eighth notes/rests == 1 quarter note/rest<br>
+            4 eight notes/rests == 1 half note/rest<br>
+            8 eighth notes/rests == 1 whole note/rest</b><br>
+        <b>NOTE:</b> This is where the appearance of a <b>flag</b> begins. A flag is that little flag marking at the opposite<br>
+        end of the <b>notehead</b> on the <b>stem</b>. Any flag signifies half the value of what the stem and dot portray.</p>
+
+
+    <h3>Sixteenth Duration</h3>
+    <div class="note_types">
+        <div id="sixteenth_note">
+            <img class="nat_img_size" src="{% static 'images/sixteenth box.png' %}">
+        </div>
+        <div id="sixteenth_rest">
+            <img class="nat_img_size" src="{% static 'images/sixteenth-rest.jpg' %}">
+        </div>
+    </div>
+
+    <p>A sixteenth note is a sixteenth of a whole note<br>
+        A sixteenth rest is a sixteenth of a whole rest<br>
+        <b>2 sixteenth notes/rests == 1 eighth note/rest<br>
+            4 sixteenth notes/rests == 1 quarter note/rest<br>
+            8 sixteenth notes/rests == 1 half note/rest<br>
+            16 sixteenth notes/rests == 1 whole note/rest</b><br>
+        <b>NOTE:</b> Remember the <b>flag</b>? The addition of a second flag means that the note is half of it's original value<br>
+        without the newest flag. Prior to the second flag it was an eighth note, half of an eighth is a sixteenth.</p>
+
+    <h3>Cheat Sheet Chart</h3>
+        <div id="duration_chart">
+            <img class="nat_img_size" src="{% static 'images/note-rest-chart.png' %}">
+        </div>
+
+    <h3>Note/Rest Durations on a staff</h3>
+    <div id="durations_on_staff">
+        <img class="nat_img_size" src="{% static 'images/durations-on-staff.jpg' %}">
+    </div>
+
+    <p>Notice the new note/rest on right? Can you guess what it is called?<br>
+        If you guessed <b>thirty second note/rest</b>, you are right.<br>
+        <b>2 thirty second notes/rests == 1 sixteenth note/rest<br>
+            4 thirty second notes/rests == 1 eighth note/rest<br>
+            8 thirty second notes/rests == 1 quarter note/rest<br>
+            16 thirty second notes/rests == 1 half note/rest<br>
+            32 thirty second notes/rests == 1 whole note/rest</b></p>
+
+    <h3>Dotted Notes</h3>
+    <p>Final concept for note durations.</p>
+    <div id="single_dot">
+        <img class="nat_img_size" src="{% static 'images/singledotnotes.gif' %}">
+    </div>
+    <p>Dotted notes are unique because you are able to extend the note duration by simply adding a dot.<br>
+        The rule for dotted notes is : <b>a dot after a note extends the note by half of the notes value</b>.<br>
+        Think of dots as flags, rather then halving the value it multiplies the value by time and a half.<br>
+        Examples in image starting at top-left:<br>
+        <b>Whole dotted note == whole note + half note<br>
+            Half dotted note == half note + quarter note<br>
+            Quarter dotted note == quarter note + eighth note<br>
+            Eighth dotted note == eighth note + sixteenth note</b></p>
+
+        <div id="single_dot_chart">
+            <img class="nat_img_size" src="{% static 'images/dottednoteschart.jpg' %}">
+        </div>
+    <p>Next part of dotted notes, <b>multiple dotted notes</b></p>
+    <div id="multiple_dots">
+        <img class="nat_img_size" src="{% static 'images/multipledotnotes.jpg' %}">
+    </div>
+        <p>Before we discuss multiple dots, notice the little lines connecting notes? These are <b>ties</b>.<br>
+            They basically mean that the note is played for the duration of the notes that are connected.</p>
+    <p>Last part of dotted notes. Any dot after the first note represents half of the dot before it.<br>
+    It is easier to understand by explaining the example.<br>
+    <b>Single dotted half note == half note + quarter note<br>
+        Double dotted half note == half note + quarter note + eighth note<br>
+        Triple dotted half note == half note+ quarter note + eighth note + sixteenth note</b><br>
+    This can be applied to any note and rest, but do yourself a favor and keep it simple for now.</p>
+
+
+    
+    </div>
+
+
+
+
+{% endblock %}

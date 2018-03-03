@@ -1,0 +1,63 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Dynamics and Tempo Markings</h1>
+
+    <div class="lesson_wrapper">
+    <h3>Tempo Markings</h3>
+
+    <p>
+        Some music pieces can be played at different tempos but some songs cannot, it is for this reason that we have <br>
+        tempo markings on sheet music. You will find the tempo markings on the top left above the first staff and clef.<br>
+        Here are some examples of what you might find.
+    </p>
+    <div id="tempos">
+        <img class="nat_img_size" src="{% static 'images/tempomarkings.jpg' %}">
+    </div>
+        <br>
+
+    <h3>Dynamic Markings</h3>
+    <p>
+        Dynamics are an important part of music, they are the high or soft points in music.<br>
+        Writing in standard notation allows us to be able to convey to any reader the dynamics of our musical piece.<br>
+        Here are some examples that you might see.
+    </p>
+
+    <div id="dynamics">
+        <img class="nat_img_size" src="{% static 'images/dynamicsmarkings.gif' %}">
+    </div>
+    <p>
+        This is pretty self explanatory, if you need some examples for levels of volume, use the power of google.<br>
+        Let's look at how this might look on some sheet paper.
+    </p>
+    <div id="dynamics_sheet">
+        <img class="nat_img_size" src="{% static 'images/dynamicsonsheet.png' %}">
+    </div>
+
+    <p>
+        If the last set of whole notes puzzle you, it is okay. We did not go over these, they are known as<br>
+        <b>double whole notes</b>. They are exactly what they sound like, two whole notes.
+    </p>
+    <p>
+        You might see dynamics markings with angles in between them to represent the rise and fall of volume. <br>
+    </p>
+
+    <div id="open-string-sheet">
+        <img class="nat_img_size" src="{% static 'images/GUitar-Open-Strings.png' %}">
+    </div>
+
+    <p> Here are the notes of the open strings on the guitar to understand where those strings are on a treble staff.<br>
+        Now that you have an understanding on the many aspects of sheet music, read and write sheet music as often as<br>
+        you can to become "literate". Click <a href="{% static 'images/printable-treble-cleff-staff.png' %}">HERE</a> for empty treble clef staves sheets.<br>
+        Now it's time to explore all the keys and how they are created.
+    </p>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}

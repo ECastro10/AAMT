@@ -1,0 +1,21 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1 class="center_title">Tone Generator</h1>
+
+    <div class="center-key">
+
+        <p>
+            Generate any note or combination of notes or choose from the library of options.<br>
+        </p>
+
+        <button id="toggle_tone" onclick="toggle_playing_sound()">Play/Stop Tone(s)</button>
+
+    </div>
+
+
+<script src="{% static 'js/toneGenerator.js' %}"></script>
+
+{% endblock %}

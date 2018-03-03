@@ -1,0 +1,49 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Chord Families</h1>
+    
+    <div class="lesson_wrapper">
+    
+    <p>
+        Remember how in the last chapter we discovered that there were only so many major, minor, or diminished chords<br>
+        per key? When you make chords from the available notes in a major scale, this is known as <b>harmonizing a major scale</b>.<br>
+        You are free to call these <b>chord families</b> as well because these family patterns are specific to each key.
+    </p>
+
+    <h3>
+        Triad Chord Families
+    </h3>
+
+    <p>
+        To recap some notes from last chapter, there are only three major triads, three minor triads, and one diminished triad<br>
+        per key. So how do achieve this number? Simply create a chord out of every note in that scale. Since there are only<br>
+        seven notes per major scale, there can only be seven chords. This image illustrate the concept.
+    </p>
+
+    <div id="harmonizing-major-scale">
+        <img class="nat_img_size" src="{% static 'images/the-harmonization-process.jpg' %}">
+    </div>
+    
+    <p>
+        Shortcut to remembering chord families, first though, know the notes in that major scale. The pattern for chords<br>
+        starting from the root note and on:<br><br>
+        <b>Major, Minor, Minor, Major, Major, Minor, Diminished.</b><br><br>
+        This pattern works for all keys. Try writing out the chord families for all the keys. You will notice how different<br>
+        shuffle throughout all the keys.<br>
+        Here is what the C major scale family looks like on a staff.<br><br>
+        <b>NOTE: From here on out, we will refer to the chords in each chord family by numbers.<br>
+        example: I chord == C Major, II Chord == D minor, III chord == E minor, ..., VII chord == B diminished.</b>
+    </p>
+
+    <div id="chord-family-staff">
+        <img class="nat_img_size" src="{% static 'images/C major three note family of chords.png' %}">
+    </div>
+    
+    </div>
+
+
+
+
+{% endblock %}

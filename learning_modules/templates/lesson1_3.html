@@ -1,0 +1,72 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="center_title">Tuning Up!</h1>
+    <div class="lesson_wrapper">
+    <p class="">Now that you know the names of the open strings on your guitar, it is time to see if you are in tune<br>
+    If you have a tuner at home feel free to use it, if not, go to the home page and click on the tile that says "tuner".<br>
+    Now start from your <b>sixth string == low E string</b>. Pluck it and let it ring while the tuner is one.<br>
+    The following table shows you the frequencies you want to hit for each string.</p>
+    <table>
+        <tr>
+            <th scope="col">String #</th>
+            <th scope="col">Note</th>
+            <th scope="col">Frequency</th>
+            <th scope="col">Scientific Name</th>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <th scope="row">E</th>
+            <th scope="row">82.41 Hz</th>
+            <th scope="row">E2</th>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <th scope="row">A</th>
+            <th scope="row">110.00 Hz</th>
+            <th scope="row">A2</th>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <th scope="row">D</th>
+            <th scope="row">146.83 Hz</th>
+            <th scope="row">D3</th>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <th scope="row">G</th>
+            <th scope="row">196.00 Hz</th>
+            <th scope="row">G3</th>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <th scope="row">B</th>
+            <th scope="row">246.94 Hz</th>
+            <th scope="row">B3</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <th scope="row">E</th>
+            <th scope="row">329.63</th>
+            <th scope="row">E4</th>
+        </tr>
+    </table>
+    <p>All tuned up? Here's a fun technique to hear how two notes that are an octave apart sound.</p>
+
+    <div id="guitar_octaves">
+        <div class="nat_img_size">
+            <img src="{% static 'images/octaves.jpg' %}">
+        </div>
+    </div>
+        <p>The left most part of each picture is the <b>sixth string == low E == thickest string.</b><br>
+        Practice all of these patterns and start thinking about string relationships.<br>
+        By string relationships I mean the distance relationships for the same note.<br>
+        Besides that, practice these shapes everyday for a nice thick sound with only 1 note!</p>
+    </div>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,39 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="center_title">Lesson 1.1 - Notes In Western Music</h1>
+    <div class="lesson_wrapper">
+        <h2>Types of notes</h2>
+        <p>Western music theory consists of <b>12 notes, 7 natural notes and 5 accidentals notes.</b><br>
+            It is important to become acquainted with these two symbols - <b>#</b> and <b>b.</b><br>
+            <b># = sharp, b = flat</b><br>
+            <b>Natural Notes: A - B - C - D - E - F - G</b><br>
+            <b>Accidental Notes: A#/Bb - C#/Db - D#/Eb - F#/Gb - G#/Ab</b><br>
+            Accidentals have two name for reasons that we will talk about when we get to scales</p>
+
+            <div class="one_octave">
+                <img class="nat_img_size" src="{% static 'images/piano-notes-and-keys.jpg' %}">
+            </div>
+
+        <p>The Piano is an excellent tool for illustrating and remembering the arrangement of notes.<br>
+            As you have probably noticed the <b>white keys are all natural notes</b> and <b>the black keys are all accidentals.</b>
+            So you would read the notes ascending like so:<br>
+            <b>C - (C#/Db) - D - (D#/Eb) - E - F - (F#/Gb) - G - (G#/Ab) - A - (A#/Bb) - B - C</b></p>
+
+        <h2>Octaves</h2>
+        <p>You are probably wondering "but what about all the other notes on the piano?"<br>
+            The piano segment shown above is just one octave and the piano contains multiple <b>octaves.</b><br>
+            So what is an <b>octave?</b></p>
+
+        <div id="piano_all_octave">
+            <img class="nat_img_size" src="{% static 'images/CsLabeledScientific.png' %}">
+        </div>
+        <p>The image above shows a piano and it highlights all of the C notes.<br>
+        But what makes them different? Frequency, the difference between a C4 and a C5 is a double in frequency.<br>
+        Ultimately though the note remains the same, it just sounds like a "higher" or "lower version of another."<br>
+        The note with a number next to it i.e.: C3, is known as "scientific pitch notation". If you ever see these<br>
+        in the future it specifically tells you what pitch of C you need.</p>
+
+{% endblock %}

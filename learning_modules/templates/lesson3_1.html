@@ -1,0 +1,26 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Tones versus Semitones</h1>
+<div class="lesson_wrapper">
+<p>So in the last lesson we learned about the chromatic scale and how it basically just goes to the next note.<br>
+    From here on out our scales will have patterns but in order to understand that you need to understand<br>
+    the difference between a Tone and a Semitone.</p>
+<h3>Difference between a Tone and a Semitone</h3>
+<p>Remember the image of the piano keys? If not, here you go.</p>
+
+<div class="one_octave">
+    <img class="nat_img_size" src="{% static 'images/piano-notes-and-keys.jpg' %}">
+</div>
+
+<p>Let's focus on the natural notes (A, B, C, D, E, F, G)<br>
+    Every space between notes is called a <b>half step.</b> Know this word because we will be using it from now on.<br>
+    So C --> C#/Db is considered a half step. Now what if you want to go from C --> D? It can be two half steps or<br>
+    we can call it by it's name, a <b>Whole Step.</b> Remember this name as well.<br>
+    So D --> E is a whole step but E --> F is only a half step. Why do B --> C and E --> F have no accidentals?<br>
+    That is another discussion that we will tackle later on.</p>
+
+</div>
+
+{% endblock %}

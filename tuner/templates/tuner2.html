@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+{#Basics to using the web audio api for mozilla#}
+    var context = new AudioContext();
+{#    createBuffer parameters: 1) number of channels#}
+{#                             2) frames#}
+{#                             3) sample rate#}
+{#This buffer will only last 0.5 seconds because 22050 / 441000 = 0.5#}
+{#44100 is a common rate for most normal sound cards#}
+{#If the buffer was mono = 1 channel#}
+{#It would last 1 second because 44100 / 44100 = 1 sec#}
+    var buffer = context.createBuffer(2, 22050, 4410)
+</script>
+
+
+
+
+
+
+{#    <script>#}
+{#    var audio_context = new AudioContext();#}
+{#	var microphone = audio_context.createMediaStreamSource(stream);#}
+{#	window.source = microphone;#}
+{##}
+{#      Open up an audio stream to analyse, then set parameters for FFT#}
+{#      To extract data from audio source, you need AnalyserNode, which is created#}
+{#      using the AudioContext.createAnalyser() method.#}
+{#        var audioCtx = new (window.AudioContext || window.webkitAudioContext) ();#}
+{#        var analyser = audioCtx.createAnalyser();#}
+{##}
+{#        The analyser node is then connected to the audio source.#}
+{#        source = audioCtx.createMediaStreamSource(stream);#}
+{#        source.connect(analyser);#}
+{#        The analyser ouput does not need to connect to anything#}
+{#        To work.#}
+{#        analyser.connect(distortion);#}
+{##}
+{#      The analyser node will then capture audio data using a FFt in acertain frequence#}
+{#      domain, depending on what you specify as the AnalyserNode.fftSize prpoerty value (default=2048 if none)#}
+{##}
+{#      TO capture data, you need to use the methods AnalyserNode.getFloatFrequencyData() and#}
+{#      AnalyserNode.getByteFrequencyData() to capture frequency data, and AnalyserNode.getByteTimeDomainData()#}
+{#      And AnalyserNode.getFloatTimeDomainData() to capture waveform data.#}
+{##}
+{#      These methods copy data into a specified array, so you need to create a new array to receive the data before#}
+{#      invoking one. The first one produces a 32-bit floating point numbers, and the second and third ones#}
+{#      produce 8-bit unsigned integers, therefore a standard JavaScript array won't do -- you need to use a#}
+{#      Float32Array or Uint8Array array, depending on what data you are handling.#}
+{##}
+{#      So for example, say we are dealing with an fft size of 2048. We return the AnalyserNode.frequencyBinCount#}
+{#      value, which is half the fft, then call Uint8Array() with the frequencyBinCount as its length argument --#}
+{#      this is how many data points we will be collection, for that fft size.#}
+{##}
+{#        analyser.fftsize = 2048;#}
+{#        var bufferLength = analyser.frequencyBinCount;#}
+{#        var dataArray = new Uint8Array(bufferLength);#}
+{##}
+{#      To actually retrieve the data and copy it into our array, we then call the data collection method we want,#}
+{#      with the array passed as its argument. For example:#}
+{##}
+{#        analyser.getByteTimeDomainData(dataArray);#}
+{##}
+{#      We now have the audio data for that moment in time captured in our array, and can proceed to visualize it#}
+{#      however we like, for example by plotting it onto an HTML5<canvas>#}
+{#      Let's look at some specific examples#}
+{##}
+{#        CREATE A WAVEFORM/OSCILLOSCOPE#}
+{##}
+{#      To begin, follow the standard patter described.#}
+{#        analyser.fftSize = 2048;#}
+{#        var bufferLength = analyser.frequencyBinCount;#}
+{#        var dataArray = new Uint8Array(bufferLength);#}
+{##}
+{#      Next, we clear the canvas of what had been drawn on it before we get ready for the new visualization display.#}
+{#        canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);#}
+{##}
+{#      We can now define the draw() function:#}
+{#        function draw() {#}
+{#            In here, we use requestAnimationFram() to keep looping the drawing function once it has been started:#}
+{#            drawVisual = requestAnimationFrame(draw);#}
+{#          Next, we grab the time domain data and copy it into our array.#}
+{#            analyser.getByteTimeDomainData(dataArray);#}
+{#          Next, fill the canvas with a solid colour to start#}
+{#            canvasCtx.fillstyle = 'rgb(200, 200, 200)';#}
+{#                canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);#}
+{#          Set a line width and stroke color for the wave we will draw, then begin drawing a path#}
+{#            canvasCtx.lineWidth = 2;#}
+{#                canvasCtx.strokeStyle = 'rgb(0, 0, 0)';#}
+{##}
+{#                canvasCtx.beginPath();#}
+{##}
+{#          Determine the width of each segment of the line to be drawn by dividing the canvas width by the array length#}
+{#          (equal to the FrequencyBinCount, as defined earlier on), then define an x variable to define the position to#}
+{#          move to for drawing each segment of the line#}
+{#            var sliceWidth = WIDTH * 1.0 / bufferLength;#}
+{#                var x = 0;#}
+{##}
+{#          Now we run through a loop, defining the position of a small segment of the wave for each point#}
+{#          in the buffer at a certain height based on the data point value form the array, then moving#}
+{#          the line across to the place where the next wave segment should be drawn:#}
+{#            for(var i = 0; i<bufferLength; i++) {#}
+{##}
+{#                var v = dataArray[i] / 128.0;#}
+{#                var y =v * HEIGHT/2;#}
+{##}
+{#                if(i === 0){#}
+{#                    canvaCtx.moveTo(x, y);#}
+{#                } else {#}
+{#                    canvasCtx.lineTo(x, y);#}
+{#                }#}
+{##}
+{#                x += sliceWidth;#}
+{#            }#}
+{##}
+{#          Finally, we finish the line in the middle of the right hand side of the canvas, then draw the stroke#}
+{#          we've defined.#}
+{#            canvasCtx.lineTo(canvas.width, canvas.height/2);#}
+{#                canvasCtx.stroke();#}
+{#        }#}
+{##}
+{#        draw();#}
+{#    </script>#}
+
+</body>
+</html>

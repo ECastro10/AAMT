@@ -1,0 +1,54 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Intervals</h1>
+    
+    <div class="lesson_wrapper">
+
+    <p>
+        Before we go into constructing chords, let's go over <b>intervals.</b><br>
+        When we talk about <b>intervals</b> we are usually referring to the <b>space between notes.</b><br>
+        Remember why the circle of fifths/fourths is named? That was an example of intervals. When going clockwise<br>
+        your next key will be a fifth higher, if going counter clockwise it will be a fourth.<br>
+        The smallest space or interval between two notes is a semitone == to one fret.<br>
+        Here is a chart with all the names of the intervals.
+    </p>
+
+
+    <div id="intervals-chart">
+        <img class="nat_img_size" src="{% static 'images/music-intervals-chart.jpg' %}">
+    </div>
+    <br>
+    
+    <p>
+        If 1 fret == 1 semitone, that means that that the octave of a note is 12 frets away (the octave being on the 12th fret).<br>
+        Next is a couple of staves with the all the intervals on them.
+    </p>
+
+    <div id="intervals-sheet">
+        <img class="nat_img_size" src="{% static 'images/intervals_on_sheet.jpg' %}">
+    </div>
+        <br>
+
+    <p>
+        So all of these spaces between notes, up to the same note itself have a name, cool, so what?<br>
+        These intervals are characterized by sound difference. That is to say that each interval sounds different.<br>
+        I highly recommend that you practice your intervals and try playing both notes together to hear what sounds good.<br>
+        If you can't remember all of the names, that is fine, for the time being just remember the followig<br>
+        <b>Major 2nd<br>
+           Major 3rd<br>
+           Perfect 4th<br>
+           Perfect 5th<br>
+           Major 7th</b>
+    </p>
+    
+    
+    
+    
+    </div>
+
+
+
+
+{% endblock %}

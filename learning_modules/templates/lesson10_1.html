@@ -1,0 +1,103 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Natural Minor Scale</h1>
+
+    <div class="lesson_wrapper">
+
+    <p>
+        Minor scales are to be practiced just like major scales. There will be some shifting on some of the minor scales<br>
+        so look out for that, but otherwise minor scales are straightforward.
+    </p>
+
+    <h3>
+        Natural Minor Scale
+    </h3>
+
+    <p>
+        <b>Formula: Whole - Half - Whole - Whole - Half - Whole - Whole == W, h, W, W, h, W, W</b><br>
+        example: A natural minor == A, B, C, D, E, F, G, A<br><br>
+        Use this formula to create any natural minor scale.<br>
+        Now let's see how a A natural minor looks like on a staff.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="A-natural-minor-scale-staff">
+            <img class="nat_img_size" src="{% static 'images/A_melodic_minor.png' %}">
+        </div>
+    </div>
+
+    <p>
+        Now let's take a look at the two octave pattern on our fretboard.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="natural-minor-scale-fretboard">
+            <img class="nat_img_size" src="{% static 'images/natural_minor_scale.jpeg' %}">
+        </div>
+    </div>
+
+        <h3>
+            Playing the pattern
+        </h3>
+
+        <p>
+            Play the 6th and 5th strings with your pointer, ring, and pinky finger. When you get to the 4th string, play<br>
+            the 7th note with your pointer finger and then the root note with your pinky finger. This constitutes the shift><br>
+            Play the 3rd string with your pointer, middle and pinky finger. Shift your hand again by playing the next note<br>
+            with your pointer finger and play normally for the remainder of the notes. <br>
+            So the shift is the same playing back to the 6th string. The idea is that the shift only occurs for the 3rd string.
+        </p>
+
+    <h3>
+        Relative Minors
+    </h3>
+
+    <p>
+        Notice how the A minor scale is comprised of only whole notes and no accidentals?<br>
+        If a minor scale has the same notes as a major scale it is most likely the relative minor of that key.<br>
+        A rule of thumb for finding the relative minor to any key is by going to the <b>6th scale degree.</b><br>
+        A<b> scale degree </b>simply means where on that scale.<br><br>
+        example: Key of C: C == 1st scale degree, D == 2nd scale degree, E == 3rd scale degree, ..., A == 6th scale degree, etc..<br>
+        <br>
+        If you have already looked up circle of fifths/fourths, then chances are that you have already seen a circle<br>
+        with relative minors on there. Every key has a relative minor because every key has a major scale with a 6th scale degree.<br>
+        <br><br>
+        <b>Notes: When you first start playing the minor scale pattern, you might be tempted to end on what would normally<br>
+        be the root note in a major scale, but don't be fooled.<br>
+        Our ears have a strong tendency to resolve, the minor scale can be used as an extension for a major scale but<br>
+        if you want it to truly sound like a minor scale, treat the red dots as the roots for that sound.</b><br><br>
+    </p>
+
+    <h3>
+        Unlocking More of the Fretboard
+    </h3>
+
+    <p>
+        As mentioned earlier under the notes, the minor scale can be used as an extension of the major scale if you focus<br>
+        on the appropriate root note.<br>
+        This means that you now know two patterns that span about 7 frets. If you are in the key of C, make that your<br>
+        root/red note, but still use the minor pattern for more options. Here is an image<br>
+        of both scales combined but the root notes will only be the root of the major == key note.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="major-minor-combination">
+            <img class="nat_img_size" src="{% static 'images/major_plus_minor.jpeg' %}">
+        </div>
+    </div>
+
+    <p>
+        <b>NOTES: Practice the minor scale as a minor and then as a part of the major scale to get a feel for the sound<br>
+        and to understand how context of the root note makes a difference.</b><br>
+        This concept of basically using the same set of notes but starting at different points is known as <b>modes.</b><br>
+        Don't worry about modes for now though, we will focus on them in chapter 13.
+    </p>
+
+    </div>
+
+
+
+
+{% endblock %}

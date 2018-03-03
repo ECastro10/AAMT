@@ -1,0 +1,42 @@
+{% extends 'spinning_wheel_base_layer.html' %}
+{% load static %}
+
+
+
+{% block content %}
+            <div id="main">
+                <div class="inner">
+                    <h1>Circle of Fifths Key Generator</h1>
+                    <span class="image main"><img src="{% static 'images/pic13.jpg' %}" alt="" /></span>
+                    <p>
+                        Practice your knowledge and skills by using the Circle of Fifths to generate a key or simply<br />
+                        work through the circle of fifths clockwise or counterclockwise(circle of fourths).<br>
+                        Click the "Hide/Reveal Notes" button for a challenge.
+                    </p>
+                </div>
+                <div id="circle_of_fifths_wrapper">
+                    <div id="circle_of_fifths_main">
+                        <div id="circle_tag"><h1><i>Circle of Fifths</i></h1></div>
+                            <div id="circle_image">
+                                <img class="nat_img_size" src="{% static 'images/circle_of_fifths.jpg' %}">
+                            </div>
+                            <div id="button_div">
+                            <button id="cb">Generate Key</button>
+                            </div>
+                    </div>
+                        <div id="circle_of_fifths_info">
+                            <div id="key_info_tag"><h1 id="key">Current Key</h1></div>
+                            <div id="key_info">
+                                <div id="key_info_content">
+                                    <ul id="keys">
+                                        <li id="current_key">C</li>
+                                        <li id="notes_title"><u>Notes in Major Scale:</u></li>
+                                            <li id="scale_notes">C, D, E, F, G, A, B</li>
+                                    </ul>
+                                    <button id="hide-reveal-notes" onclick="ShowHideNotes()">Hide/Reveal Notes</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="center_title">Notes On Your Guitar</h1>
+    <div class="lesson_wrapper">
+        <h2>The Open Strings On A Standard Tuned Guitar</h2>
+            <p>If you just bought a guitar, chances are that it is tuned to the standard EADGBE tuning.<br>
+            Here is an image to help you orient yourself on the guitar.</p>
+
+            <div id="six_strings_guitar">
+                <img class="nat_img_size" src="{% static 'images/six-string-guitar-names-2.jpg' %}">
+
+            </div>
+            <p>The last E after B is the <b>High E</b> string and when numbered is the first.<br>
+            It is common practice to know these open strings by numbers.<br>
+            <b>1 = High E<br>2 = B<br>3 = G<br>4 = D<br>5 = A<br>6 = Low E</b><br>
+            This can be confusing at first but with time and practice it will become easier.<br>
+            Now that you understand the orientation of the strings, you are more than welcome to search<br>
+            "<b>mnemonic acronyms for guitar strings</b>", this should yield plenty results, memorize it and remember it.</p>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,189 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Triad Chords</h1>
+    
+    <div class="lesson_wrapper">
+    
+    <p>
+        Remember the <b>Major 2nd, Major 3rd and Perfect 5th?</b><br>
+        Let's put those into play, from here on out we will refer to them in a short hand manner simply as 2nd, 3rd, 4th, 5th, and 7th.
+    </p>
+
+    <h3>
+        Triad Chords
+    </h3>
+
+    <p>
+        The most basic chords besides interval type chords are triads. <b>Interval chords consist of 2 notes, triad chords consist of 3 notes.</b><br>
+        So all of the formulas in this chapter will only consist of three notes.<br><br>
+        <b>NOTE: Make it a point to memorize all of you triad formulas and patterns because these will be the building<br>
+            blocks for building on top of these chords.<br>
+            Every chord will be built from a major scale, so if you haven't already, memorize that major scale formula and those scales.<br>
+            For the sake of brevity, all chords will be built in the key of C but remember that the other key's chords won't be too far<br>
+            from the key of C chords in terms of spelling.</b>
+    </p>
+        <br>
+
+    <h3>
+        Major Chords
+    </h3>
+
+    <p>
+        First of all, the key of C == C - D - E - F - G - A - B<br>
+        All major chords are stacked in thirds, like so.<br><br>
+        <b>FORMULA: 1 - 3 - 5<br>
+        Space between 1 and 3 == 4 semitones<br>
+        Space between 3 and 5 == 3 semitones<br>
+            SOUND: happy and simple<br></b>
+    </p>
+
+            <div class="chord-and-image-wrapper">
+
+                <div class="chord-and-image">
+                    <div class="chord-image-wrapper">
+                        <img class="nat_img_size" src="{% static 'images/c-major-chord-on-treble-clef.png' %}">
+                        <b>C Major == C - E - G</b>
+                    </div>
+
+
+                </div>
+
+
+                <div class="chord-and-image">
+
+                    <div class="chord-image-wrapper">
+                        <img class="nat_img_size" src="{% static 'images/f-major-chord-on-treble-clef.png' %}">
+                        <b>F Major == F - A - C</b>
+                    </div>
+
+
+                </div>
+
+
+                <div class="chord-and-image">
+
+                    <div class="chord-image-wrapper">
+                        <img class="nat_img_size" src="{% static 'images/f-major-chord-on-treble-clef.png' %}">
+                        <b>G Major == G - B - D</b>
+                    </div>
+
+                </div>
+
+            </div>
+    <br>
+
+
+
+
+    <p>The idea is to choose a note in the scale and that becomes your 1, that is the note name of the chord.<br>
+        The reason that they are thirds is because C --> D == 2 semitones == Major 2nd, C --> E == 4 semitones == Major 3rd.<br>
+        Remember that this is not the case with all notes because the <b>amount of semitones between all the notes are not the same.</b><br>
+
+        <b>In any key, there will be only 3 major chords due to the restrictions of semitones spaces.<br><br></b>
+        <b>NOTE: You will find out later on why a major chord is a major, it has to do mostly with the sound created by the intervals in the chord.</b>
+    </p>
+        <br>
+
+
+    <h3>
+        Minor Chords
+    </h3>
+
+    <p>
+        <b>FORMULA: 1 - b3 - 5<br>
+        Spaces between 1 and b3 == 3 semitones<br>
+        Spaces between b3 and 5 == 4 semitones<br>
+            SOUND: sad or serious</b>
+    </p>
+
+            <div class="chord-and-image-wrapper">
+
+
+                <div class="chord-and-image">
+                    <img class="nat_img_size" src="{% static 'images/d-minor-chord-on-treble-clef.png' %}">
+                        <b>D minor == D - F - A</b>
+                </div>
+
+
+                <div class="chord-and-image">
+                    <img class="nat_img_size" src="{% static 'images/e-minor-chord-on-treble-clef.png' %}">
+                        <b>E minor == E - G - B</b>
+                </div>
+
+
+                <div class="chord-and-image">
+                    <img class="nat_img_size" src="{% static 'images/a-minor-chord-on-treble-clef.png' %}">
+                        <b>A minor == A - C - E</b>
+                </div>
+
+
+            </div>
+
+    <br>
+
+    <p>
+        So the only difference here is that this formula requires that you flatten(b) the third, anytime you see a (b) it means<br>
+        flatten == down one semitone, and (#) means to sharpen == up one semitone.<br>
+        <b>There will only be 3 minor chords in a key due to the formula.</b>
+    </p>
+        <br>
+
+    <h3>
+        Diminished Chords
+    </h3>
+
+    <p>
+        <b>FORMULA: 1 - b3 - b5<br>
+        Spaces between 1 and b3 == 3 semitones<br>
+        Spaces between b3 and b5 == 3 semitones<br>
+            SOUND: dark and edgy<br></b>
+    </p>
+
+            <div class="chord-and-image-wrapper">
+
+                <div class="chord-and-image">
+                     <img class="nat_img_size" src="{% static 'images/b-diminished-chord-on-treble-clef.png' %}">
+                        <b>B diminished == B - D - F</b>
+                </div>
+
+            </div>
+    <br>
+
+    <p>
+        This is basically a minor chord with a flattened 5th. You will only find 1 diminished chord in a key.
+    </p>
+    <br>
+
+    <h3>
+        Augmented Chords
+    </h3>
+
+    <p>
+        <b>FORMULA: 1 - 3 - #5<br>
+        Spaces between 1 and 3 == 4 semitones<br>
+        Spaces between 3 and #5 == 4 semitones<br>
+        SOUND: suspenseful</b><br><br>
+
+        This is basically a major chord with a sharpened 5th. There are no augmented chords that occur naturally in any key.<br>
+        Augmented chords are unstable and they have a tendency to want to move to another more stable chord.
+    </p>
+    <br>
+    <p>
+        These formulas form the basis for all triad chords that occur naturally in major scales in any key.<br>
+        Take the sound description with a grain of salt. The sound of each chord can be interpreted in many ways.<br>
+        Lastly, write these basic triads out over and over until you know your triads by heart. This will make your life<br>
+        easier later on.
+        <b>NOTE: The 3rd dictates whether the chord is major or minor, from there you then modify the 5th to find out whether<br>
+        it is an augmented major or a diminished minor (although saying these things is redundant).</b>
+    </p>
+    
+    
+    
+    </div>
+
+
+
+
+{% endblock %}

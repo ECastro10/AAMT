@@ -1,0 +1,107 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+
+
+                {% block content %}
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Welcome to All About Music Theory(AAMT)<br />
+								</h1>
+								<p>This site is dedicated to spreading the fundamentals of music theory on the guitar.</p>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img class="nat_img_size" src="{% static 'images/pic01.jpg' %}" alt="" />
+									</span>
+									<a href="{% url 'theory' %}">
+										<h2>Theory</h2>
+										<div class="content">
+											<p>Brush up on your music theory or learn something new!</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img class="nat_img_size" src="{% static 'images/pic02.jpg' %}" alt="" height="326px" width="353px" />
+									</span>
+									<a href="{% static 'images/printable-treble-cleff-staff.png' %}">
+										<h2>Blank Staff Paper</h2>
+										<div class="content">
+											<p>Print out treble cleff staff paper.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img class="nat_img_size" src="{% static 'images/pic03.jpg' %}" alt="" />
+									</span>
+									<a href="{% url 'circle_of_fifths' %}">
+										<h2>Circle of Fifths</h2>
+										<div class="content">
+											<p>Use this excellent tool as a way to practice your skills and knowledge.</p>
+										</div>
+									</a>
+								</article>
+                                <article class="style4">
+									<span class="image">
+                                        <img class="nat_img_size" src="{% static 'images/pic05.jpg' %}"/>
+									</span>
+									<a href="{% url 'tuner' %}">
+										<h2>Tuner</h2>
+										<div class="content">
+											<p>Not the best, but it gets the job done in a pinch. Also works offline</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="{% static 'images/pic04.jpg' %}" alt="" />
+									</span>
+                                        {% if user.is_authenticated %}
+                                            <a href="{% url 'dashboard' user.username %}">
+                                            <h2> Welcome {{ user.username }}! </h2>
+                                            <div class="content">
+                                            <p>Click in the box to go to your dashboard</p>
+                                            </div>
+                                            </a>
+                                        {% else %}
+                                            <a href="{% url 'login' %}">
+                                            <h2>Sign In/Register</h2>
+										<div class="content">
+											<p>Returning? Click on the box, if not, register here!</p>
+										</div>
+                                        {% endif %}
+									</a>
+                                </article>
+                            {% if user.is_authenticated %}
+                                <article class="style6">
+									<span class="image">
+										<img src="{% static 'images/pic06.jpg' %}" alt="" />
+									</span>
+									<a href="{% url 'logout' %}">
+										<h2>Logout</h2>
+										<div class="content">
+											<p>Click here to Logout</p>
+										</div>
+									</a>
+								</article>
+                            {% endif %}
+                                <article class="style7">
+									<span class="image">
+										<img src="{% static 'images/pic07.jpg' %}" alt="" />
+									</span>
+									<a href="{% url 'tone generator' %}">
+										<h2>Tone Generator</h2>
+										<div class="content">
+											<p>Click here to go to the Tone Generator</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+                {% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+                {% block content %}
+				<!-- Main -->
+
+                    <div id="main">
+
+						<div class="inner">
+                            {% if member.username == user.username %}
+							<h1>{{ user.username }}'s Dashboard</h1>
+                            <div id="user-theorynav-wrapper">
+                                <div id="user-side">
+							        <h6>Welcome,<br/>look at lessons and your progress.</h6>
+                                        <div id="image-and-bio">
+                                            <div id="user-image-div">
+                                                <div id="user-image">
+                                                    {% if member.image %}
+                                                        <img src="{{ member.image.url }}"/><br>
+                                                    {% else %}
+                                                        <img src="{% static 'images/default_pic.jpg' %}"/><br>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div id="user-bio">
+                                                <h6><i>Bio:</i></h6>
+                                                {{ member.bio }}
+                                            </div>
+                                        </div>
+                                            <div id="user-instruments">
+                                                <div>
+                                                    <h6></h6>
+                                        <h6><i>Instruments:</i></h6>
+                                                    {% for i in instruments %}
+                                                    {{ i.name }}<br/>
+                                                    {% endfor %}
+
+                                                </div>
+                                            </div>
+                                </div>
+                                <div id="nav">
+                                    <h3 id="title_to_rule_them_all"><i>Theory Lessons</i></h3>
+                                    <div class="lessons">
+                                        <h4 class="chapter">Chapter 1 - Intro to Theory</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson1.1' %}">1.1 Notes in Western Music</a><br>
+                                            <a href="{% url 'lesson1.2' %}">1.2 Notes on Your Guitar</a><br>
+                                            <a href="{% url 'lesson1.3' %}">1.3 Tuning Up</a></p>
+
+                                        <h4 class="chapter">Chapter 2 - Chromatic Scale</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson2.1' %}">2.1 First Scale! (Chromatic)</a></p>
+
+                                        <h4 class="chapter">Chapter 3 - Major Scale</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson3.1' %}">3.1 Tone Versus Semitone</a><br>
+                                            <a href="{% url 'lesson3.2' %}">3.2 Major Scale</a></p>
+
+                                        <h4 class="chapter">Chapter 4 - Standard Notation</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson4.1' %}">4.1 Clefs, Staves, and Ledger Lines</a><br>
+                                            <a href="{% url 'lesson4.2' %}">4.2 Note Durations and Ties</a><br>
+                                            <a href="{% url 'lesson4.3' %}">4.3 Bar lines, Repeat Marks, and Time Signatures</a><br>
+                                            <a href="{% url 'lesson4.4' %}">4.4 Dynamics and Tempo Markings</a><br>
+
+                                        <h4 class="chapter">Chapter 5 - Key Signatures</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson5.1' %}">5.1 Circle of Fifths/Fourths</a></p>
+
+                                        <h4 class="chapter">Chapter 6 - Triad Formulas</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson6.1' %}">6.1 Intervals</a><br>
+                                            <a href="{% url 'lesson6.2' %}">6.2 Major, Minor, Diminished, & Augmented Chords</a><br>
+                                            <a href="{% url 'lesson6.3' %}">6.3 Suspended Chords</a></p>
+
+                                        <h4 class="chapter">Chapter 7 - Harmonized Major Scale(Triads)</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson7.1' %}">7.1 Chord Families</a></p>
+
+                                        <h4 class="chapter">Chapter 8 - Cadences</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson8.1' %}">8.1 Authentic, Plagal, Half, Deceptive, and Interrupted</a></p>
+
+                                        <h4 class="chapter">Chapter 9 - Diatonic Chord Sequence Structures</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson9.1' %}">9.1 Chord Progressions</a></p>
+
+                                        <h4 class="chapter">Chapter 10 - Relative Minor & Minor Scales</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson10.1' %}">10.1 Natural Minor Scale & Relative Minor</a><br>
+                                            <a href="{% url 'lesson10.2' %}">10.2 Harmonic Minor Scale</a><br>
+                                            <a href="{% url 'lesson10.3' %}">10.3 Melodic Minor Scale</a></p>
+
+                                        <h4 class="chapter">Chapter 11 - Pentatonic & Blues Scales</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson11.1' %}">11.1 Major Pentatonic Scale</a><br>
+                                            <a href="{% url 'lesson11.2' %}">11.2 Minor Pentatonic Scale</a><br>
+                                            <a href="{% url 'lesson11.3' %}">11.3 Blues Scale</a></p>
+
+                                        <h4 class="chapter">Chapter 12 - 6th Chords</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson12.1' %}">12.1 Sixth Chords</a></p>
+
+                                        <h4 class="chapter">Chapter 13 - 7th Chords and Family, Arpeggios, and Extended Chords</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson13.1' %}">13.1 Seventh Chords</a><br>
+                                            <a href="{% url 'lesson13.2' %}">13.2 Sevenths Chord Family</a><br>
+                                            <a href="{% url 'lesson13.3' %}">13.3 Arpeggios</a><br>
+                                            <a href="{% url 'lesson13.4' %}">13.4 Building Extended Chords</a></p>
+
+                                        <h4 class="chapter">Chapter 14 - Modes</h4>
+                                        <p class="lesson_title"><a href="{% url 'lesson14.1' %}">14.1 Ionian (Major)</a><br>
+                                            <a href="{% url 'lesson14.2' %}">14.2 Dorian</a><br>
+                                            <a href="{% url 'lesson14.3' %}">14.3 Phrygian</a><br>
+                                            <a href="{% url 'lesson14.4' %}">14.4 Lydian</a><br>
+                                            <a href="{% url 'lesson14.5' %}">14.5 Mixolydian</a><br>
+                                            <a href="{% url 'lesson14.6' %}">14.6 Aeolian (Minor)</a><br>
+                                            <a href="{% url 'lesson14.7' %}">14.7 Locrian</a></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                        {% else %}
+                        <div class="inner">
+                        <h1>Not your dashboard</h1>
+                        <span class="image main"><img src="{% static 'images/pic13.jpg' %}" alt="" /></span>
+                        <p>This is not your dashboard! Please click on the "Hello your username" tile on the home page to go to your own dashboard.</p>
+
+
+                    {% endif %}
+
+
+
+                {% endblock %}

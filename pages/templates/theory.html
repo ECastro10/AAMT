@@ -1,0 +1,482 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+                {% block content %}
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Music Theory And Some Guitar Information</h1>
+							<span class="image main"><img src="{% static 'images/pic13.jpg' %}" alt="" /></span>
+                            <div id="theory_wrapper">
+                                <div id="theory_content">
+                                    <h6><i>Standard Tuning Open Strings:</i></h6>
+                                    <p>E, A, D, G, B, E</p>
+                                    <h6><i>Notes In Western Music:</i></h6>
+                                    <p>C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B</p>
+                                    <h6><i>Intervals and Their Names</i></h6>
+                                    <table id="theory-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Interval Name</i></th>
+                                                <th scope="col"><i>Abbreviation</i></th>
+                                                <th scope="col"><i>Step Distance</i></th>
+                                                <th scope="col"><i>Fret Distance</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Unison</td>
+                                                <td scope="row">U</td>
+                                                <td scope="row">None (Same Note)</td>
+                                                <td scope="row">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Second</td>
+                                                <td scope="row">m2</td>
+                                                <td scope="row">Half Step</td>
+                                                <td scope="row">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Second</td>
+                                                <td scope="row">M2</td>
+                                                <td scope="row">Whole Step</td>
+                                                <td scope="row">2</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Third</td>
+                                                <td scope="row">m3</td>
+                                                <td scope="row">Whole Step + Half Step</td>
+                                                <td scope="row">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Third</td>
+                                                <td scope="row">M3</td>
+                                                <td scope="row">2 Whole Steps</td>
+                                                <td scope="row">4</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Perfect Fourth</td>
+                                                <td scope="row">P4</td>
+                                                <td scope="row">2 Whole Steps + Half Step</td>
+                                                <td scope="row">5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Augemented Fourth, Diminished Fifth, Tritone</td>
+                                                <td scope="row">A4, D5, or TT</td>
+                                                <td scope="row">3 Whole Steps</td>
+                                                <td scope="row">6</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Perfect Fifth</td>
+                                                <td scope="row">P5</td>
+                                                <td scope="row">3 Whole Steps + Half Step</td>
+                                                <td scope="row">7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Sixth</td>
+                                                <td scope="row">m6</td>
+                                                <td scope="row">4 Whole Steps</td>
+                                                <td scope="row">8</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Sixth</td>
+                                                <td scope="row">M6</td>
+                                                <td scope="row">4 Whole Steps + Half Step</td>
+                                                <td scope="row">9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Seventh</td>
+                                                <td scope="row">m7</td>
+                                                <td scope="row">5 Whole Steps</td>
+                                                <td scope="row">10</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Seventh</td>
+                                                <td scope="row">M7</td>
+                                                <td scope="row">5 Whole Steps + Half Step</td>
+                                                <td scope="row">11</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Octave</td>
+                                                <td scope="row">Oct</td>
+                                                <td scope="row">6 Whole Steps (Same Note Name)</td>
+                                                <td scope="row">12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h6><i>Scale Formulas</i></h6>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Formula Type</i></th>
+                                                <th scope="col"><i>Formula (W = Whole Step, h = half step)</i></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Major</td>
+                                                <td scope="row">W, W, h, W, W, W, h</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Pentatonic</td>
+                                                <td scope="row">W, W, W+h, W, W+h</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor</td>
+                                                <td scope="row">W, h, W, W, h, W, W</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Pentatonic</td>
+                                                <td scope="row">W+h, W, W, W+h, W</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Blues</td>
+                                                <td scope="row">W+h, W, h, h, W+h, W</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h6><i>Mode Formulas (relative to Major Scale)</i></h6>
+                                    <p>for example: C, D, E, F, G, A, B = 1, 2, 3, 4, 5, 6, 7<br>
+                                    Any changes to that base major formula will be noted with the numbers by b's and #'s<br>
+                                    The defining note that makes each mode sound unique looks like this --> [ # ]</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Mode Name</i></th>
+                                                <th scope="col"><i>Mode Formula</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Ionian (Major)</td>
+                                                <td scope="row">1, 2, 3, 4, 5, 6, [7]</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Dorian</td>
+                                                <td scope="row">1, 2, b3, 4, 5, [6], b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Phrygian</td>
+                                                <td scope="row">1, [b2], b3, 4, 5, b6, b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Lydian</td>
+                                                <td scope="row">1, 2, 3, [#4], 5, 6, 7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Mixolydian</td>
+                                                <td scope="row">1, 2, 3, 4, 5, 6, [b7]</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Aeolian (Minor)</td>
+                                                <td scope="row">1, 2, b3, 4, 5, [b6], b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Locrian</td>
+                                                <td scope="row">1, b2, b3, 4, b5, b6, b7</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h6><i>Chord Construction Formulas (based on major scale)</i></h6>
+                                    <p>NOTE: ( ) = Optional Note</p>
+                                    <h3><i>Major</i></h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Chord Type</i></th>
+                                                <th scope="col"><i>Symbol</i></th>
+                                                <th scope="col"><i>Formula</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Major</td>
+                                                <td scope="row">M, Maj</td>
+                                                <td scope="row">1 - 3 - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Added Fourth</td>
+                                                <td scope="row">add4</td>
+                                                <td scope="row">1 - 3 - 4 - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Sixth</td>
+                                                <td scope="row">6</td>
+                                                <td scope="row">1 - 3 - 5 - 6</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Six Nine</td>
+                                                <td scope="row">6/9</td>
+                                                <td scope="row">1 - 3 - 5 - 6 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major 7th</td>
+                                                <td scope="row">Maj7</td>
+                                                <td scope="row">1 - 3 - 5 - 7</td>
+                                            </tr><tr>
+                                                <td scope="row">Major 9th</td>
+                                                <td scope="row">Maj9</td>
+                                                <td scope="row">1 - 3 - 5 - 7 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major 11th</td>
+                                                <td scope="row">Maj11</td>
+                                                <td scope="row">1 - 3 - 5 - 7 - (9) - 11</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major 13th</td>
+                                                <td scope="row">Maj13</td>
+                                                <td scope="row">1 - 3 - 5 - 7 - (9) - (11) - 13</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Seven Sharp Eleventh</td>
+                                                <td scope="row">Maj7#11</td>
+                                                <td scope="row">1 - 3 - 5 - 7 - #11</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Major Flat Five</td>
+                                                <td scope="row">---</td>
+                                                <td scope="row">1 - 3 - b5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3><i>Minor</i></h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Chord Type</i></th>
+                                                <th scope="col"><i>Symbol</i></th>
+                                                <th scope="col"><i>Formula</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Minor</td>
+                                                <td scope="row">m</td>
+                                                <td scope="row">1 - b3 - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Added Fourth</td>
+                                                <td scope="row">madd4</td>
+                                                <td scope="row">1 - b3 - 4 - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor 6th</td>
+                                                <td scope="row">m6</td>
+                                                <td scope="row">1 - b3 - 5 - 6</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor 7th</td>
+                                                <td scope="row">m7</td>
+                                                <td scope="row">1 - b3 - 5 - b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Added Ninth</td>
+                                                <td scope="row">madd9</td>
+                                                <td scope="row">1 - b3 - 5 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Six Add Nine</td>
+                                                <td scope="row">m6/9</td>
+                                                <td scope="row">1 - b3 - 5 - 6 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor 9th</td>
+                                                <td scope="row">m9</td>
+                                                <td scope="row">1 - b3 - 5 - b7 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor 11th</td>
+                                                <td scope="row">m11</td>
+                                                <td scope="row">1 - b3 - 5 - b7 - (9) - 11</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor 13th</td>
+                                                <td scope="row">m13</td>
+                                                <td scope="row">1 - b3 - 5 - b7 - (9) - (11) - 13</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor/Major 7th</td>
+                                                <td scope="row">m/Maj7</td>
+                                                <td scope="row">1 - b3 - 5 - 7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor/Major 9th</td>
+                                                <td scope="row">m/Maj9</td>
+                                                <td scope="row">1 - b3 - 5 - 7 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor/Major 11th</td>
+                                                <td scope="row">m/Maj11</td>
+                                                <td scope="row">1 - b3 - 5 - 7 - (9) - 11</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor/Major 13th</td>
+                                                <td scope="row">m/Maj13</td>
+                                                <td scope="row">1 - b3 - 5 - 7 - (9) - (11) - 13</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Minor Seven Flat Five/Fifth</td>
+                                                <td scope="row">m7-5, m7b5</td>
+                                                <td scope="row">1 - b3 - b5 - b7</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3><i>Dominant</i></h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Chord Type</i></th>
+                                                <th scope="col"><i>Symbol</i></th>
+                                                <th scope="col"><i>Formula</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Seventh</td>
+                                                <td scope="row">7</td>
+                                                <td scope="row">1 - 3 - 5 - b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Ninth</td>
+                                                <td scope="row">9</td>
+                                                <td scope="row">1 - 3 - 5 - b7 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Eleventh</td>
+                                                <td scope="row">11</td>
+                                                <td scope="row">1 - (3) - 5 - b7 - (9) - 11</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Thirteenth</td>
+                                                <td scope="row">13</td>
+                                                <td scope="row">1 - 3 - 5 - b7 - (9) - (11) - 13</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Sharp Five</td>
+                                                <td scope="row">7#5</td>
+                                                <td scope="row">1 - 3 - #5 - b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Flat Five</td>
+                                                <td scope="row">7b5</td>
+                                                <td scope="row">1 - 3 - b5 - b7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Flat Ninth</td>
+                                                <td scope="row">7b9</td>
+                                                <td scope="row">1 - 3 - 5 - b7 - b9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Sharp Ninth</td>
+                                                <td scope="row">7#9</td>
+                                                <td scope="row">1 - 3 - 5 - b7 - #9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Nine Sharp Five</td>
+                                                <td scope="row">9#5</td>
+                                                <td scope="row">1 - 3 - #5 - b7 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Nine Flat Five</td>
+                                                <td scope="row">9b5</td>
+                                                <td scope="row">1 - 3 - b5 - b7 - 9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Sharp Five Sharp Nine</td>
+                                                <td scope="row">7#5#9</td>
+                                                <td scope="row">1 - 3 - #5 - b7 - #9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Sharp Five Flat Nine</td>
+                                                <td scope="row">7#5b9</td>
+                                                <td scope="row">1 - 3 - #5 - b7 - b9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Flat Five Sharp Nine</td>
+                                                <td scope="row">7b5#9</td>
+                                                <td scope="row">1 - 3 - b5 - b7 - #9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Flat Five Flat Nine</td>
+                                                <td scope="row">7b5b9</td>
+                                                <td scope="row">1 - 3 - b5 - b7 - b9</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Seven Sharp Eleven</td>
+                                                <td scope="row">7#11</td>
+                                                <td scope="row">1 - 3 - 5 - b7 - #11</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3><i>Symmetrical</i></h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Chord Type</i></th>
+                                                <th scope="col"><i>Symbol</i></th>
+                                                <th scope="col"><i>Formula</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Diminished</td>
+                                                <td scope="row">dim</td>
+                                                <td scope="row">1 - b3 - b5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Diminished 7th</td>
+                                                <td scope="row">dim7</td>
+                                                <td scope="row">1 - b3 - b5 - bb7</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Augmented</td>
+                                                <td scope="row">aug</td>
+                                                <td scope="row">1 - 3 - #5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3><i>Miscellaneous Chords</i></h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><i>Chord Type</i></th>
+                                                <th scope="col"><i>Symbol</i></th>
+                                                <th scope="col"><i>Formula</i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Fifth</td>
+                                                <td scope="row">5</td>
+                                                <td scope="row">1 - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Flat Fifth</td>
+                                                <td scope="row">-5</td>
+                                                <td scope="row">1 - b5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Suspended Fourth</td>
+                                                <td scope="row">sus4</td>
+                                                <td scope="row">1 - 4 - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Suspended Second</td>
+                                                <td scope="row">Sus2</td>
+                                                <td scope="row">1 - 2(9) - 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Sharp Eleven</td>
+                                                <td scope="row">#11</td>
+                                                <td scope="row">1 - 5 - #11</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+						</div>
+					</div>
+
+
+                {% endblock %}

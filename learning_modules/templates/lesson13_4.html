@@ -1,0 +1,49 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Building Extended Chords</h1>
+
+    <div class="lesson_wrapper">
+
+    <p>
+        Chances are that you have heard of other chords besides the chords that we have discussed.<br>
+        If not, there are 9th chords, 11ths, 13ths, and variations amongst those named.<br>
+        Once you get past 7th chords, they become extended chords. Although there are non extended chords<br>
+        that have an extended note added.<br>
+        example: 6/9 == Major 6 add 9.<br>
+        Lastly, there are also variations to non extended chords that we did not go over but the formulas<br>
+        are available on the <a href="{% url 'theory' %}"><b>theory page.</b></a>
+    </p>
+
+    <h3>What is an Extended Chord</h3>
+
+    <p>
+        What makes a chord extended is easier to understand with an example.
+        <br><br>
+        <b>Key of C: C, D, E, F, G, A, B</b><br>
+        Here you have your notes in the key of C. When it comes to chords we can create, the most<br>
+        diverse chords that we know only require 4 of these notes inside the same octave.<br>
+        Remember how in scale degrees C == 1, D == 2, E == 3, etc..?<br>
+        With one octave you can only have 7 scale degrees hence why you get those 7ths.<br>
+        To get extended chords, you have to extend that scale past that single octave.<br><br>
+        <b>example: C, D, E, F, G, A, B, C, D, E, F, G, A, B</b><br>
+        Here we have C == 1, ... B == 7, C == 8, D == 9, E == 10, ... B == 14.<br>
+        Notice how instead of starting back at one on the C you continue counting?<br>
+        You are extending that scale. You only go up to the 13th because after that you basically start<br>
+        repeating again. If this were to happen, you would be playing octaves.<br>
+        With extended chords, you will notice that some notes become optional which allows you to play<br>
+        smaller shapes.<br>
+        I won't dive into how to build them because there are so many extended chords, but there is a<br>
+        cheat sheet on the <a href="{% url 'theory' %}"><b>theory page.</b></a> Just scroll down until you get to chord construction formulas.<br>
+        I recommend exploring these chord types when you are having trouble finding the sound that you want.
+    </p>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Dorian Mode</h1>
+    
+    <div class="lesson_wrapper">
+    
+    <p>
+        Let's take a look at the second mode known as the <b>Dorian Mode.</b>
+    </p>
+
+    <h3>Dorian Mode</h3>
+
+    <p>
+        <b>Dorian Mode:<br>
+        1 - 2 - b3 - 4 - 5 - [6] - b7<br>
+        Unique Note: 6</b><br>
+    </p>
+
+    <p>
+        Let's discuss this a bit.<br>
+        In order to achieve the same notes in a key but starting and ending on the second note, we have to first change<br>
+        the root name and then the mode name.<br><br>
+
+        <b>example: C - D - E - F - G - A - B - C == C Ionian<br>
+        D - E - F# - G - A - B - C# - D == D Ionian</b><br><br>
+
+        Notice how at this point the notes are not the same? That is because we are still in the first mode, the intervals<br>
+        are not appropriate for this layout. We need to flatten following:<br>
+        <b>3rd & 7th scale degrees</b><br>
+        It just so happens that the Dorian mode has this formula.<br><br>
+
+        <b>example: D - E - F# - G - A - B - C# - D == D Ionian<br>
+        D - E - F - G - A - B - C - D == D Dorian</b><br><br>
+
+        See how that worked. The basic layout of each mode (or formula, whichever you prefer) allows this new scale<br>
+        to have different starting and ending points while still maintaining the same notes in the key that you want.<br><br>
+
+        Let's see how it looks like on the fretboard by itself and then with the Ionian Mode.
+
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="dorian-mode-pattern-6th-string">
+            <img class="nat_img_size" src="{% static 'images/dorian-mode-pattern-6th-string.jpeg' %}">
+        </div>
+    </div>
+        <p class="center-key">
+            <b>
+                Key:<br>
+                Green == Mode root<br>
+                Red == Regular Root<br>
+                Yellow == Unique Notes<br><br>
+
+                The rest of the diagrams in the mode chapter will follow this key.<br>
+                This key is here so that you understand the relationships between the mode, the key, and the unique notes.
+            </b>
+        </p>
+
+    <p>
+        So here is the Dorian pattern with the initial root on the 6th string, nothing too crazy.
+    </p>
+        <br>
+        <br>
+
+    <div class="center-image-wrapper">
+        <div id="dorian-mode-pattern-5th-string">
+            <img class="nat_img_size" src="{% static 'images/dorian-mode-pattern-5th-string.jpeg' %}">
+        </div>
+    </div>
+
+    <p class="center-key">
+        The shift:<br>
+        <b>The shift occurs on the 3rd string (G string)<br>
+        The green note (mode root) should be hit with your pointer finger.</b>
+    </p>
+        <br>
+
+    <p>
+        And here is the big pattern if you combine the Ionian and Dorian modes but focus on the key or original root note.
+    </p>
+
+    <div class="center-image-wrapper">
+        <div id="ionian-dorian">
+            <img class="nat_img_size" src="{% static 'images/ionian-plus-dorian-pattern.jpeg' %}">
+        </div>
+    </div>
+    <br>
+    <br>
+
+   <p>
+        Now that you know two modes, practice them, and focus on those unique notes to hear the differences.<br>
+        However if you don't want to treat the green notes as home base and hear the green notes, you can treat the red notes as home base<br>
+        and basically have an expanded range to play the Ionian Mode.<br>
+        The main takeaway is that we are expanding our knowledge on the fretboard and introducing<br>
+        new focal points.
+    </p>
+
+
+
+
+
+
+    </div>
+
+
+
+
+{% endblock %}

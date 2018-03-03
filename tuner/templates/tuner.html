@@ -1,0 +1,40 @@
+{% extends 'base_layer_tuner.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+    <div id="tuner_wrapper">
+        <div id="tuner">
+        <p class="text_outside_button">It sounds like you're playing...</p>
+        <div id="three_symbols">
+            <div class="flat_sharp_or_zero" id="flat">&flat;</div>
+            <div class="flat_sharp_or_zero" id="zero">0</div>
+            <div class="flat_sharp_or_zero" id="sharp">&sharp;</div>
+        </div>
+        <div id="three_lights">
+            <div class="lights" id="flat_light"></div>
+            <div class="lights" id="green_light"></div>
+            <div class="lights" id="sharp_light"></div>
+        </div>
+        <h1 id="note-name" class="text_outside_button"></h1>
+        <p>
+            <span class="text_outside_button">frequency (Hz):</span>
+            <span id="frequency" class="text_outside_button"></span>
+        </p>
+        <button id="play-note">start/stop an A4 note</button>
+        </div>
+
+      </div>
+
+    <div id="credit">
+        <p>
+            Core Content by Jonathan Bergknoff.<br>
+            Click <a href="https://github.com/jbergknoff">here</a> to go to his github repository with all the specs and code
+        </p>
+    </div>
+
+
+{% endblock %}

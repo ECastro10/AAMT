@@ -1,0 +1,47 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/register_styles.css' %}" />
+<script src="{% static 'js/ie/password_match.js' %}"></script>
+<form id="register-form" action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <b>Username</b><br>
+    <input id="form_username" type="text" name="username"><br>
+
+    <b>Email Address</b><br>
+    <input type="email" name="email"><br>
+
+    <b>Bio</b><br>
+    <textarea name="bio">
+    </textarea><br>
+
+    <b>Instruments - (format:
+    {% for i in "x2x" %}
+        <font color = "red">Instrument</font> <font color = "green">Make</font> <font color = "blue">Model</font><b>,</b>
+    {% endfor %}
+        etc.) Don't forget the comma after the Model :)</b>
+    <br><textarea name="instruments">
+    </textarea><br>
+
+    <b>Photo</b><br>
+    <input type="file" name="photo"><br>
+
+    <br><b>Password</b><br>
+    <input id="password" onKeyUp="checkBothPasswords()" type="password" name="password"><br>
+
+    <b>Re-enter Password</b><br>
+    <input id="password_check" onKeyUp="checkBothPasswords()" type="password" name="passwordcheck"><br>
+
+    <div>
+        <p id="password_error"></p>
+    </div>
+
+    <button id="register_button" disabled="disabled" type="submit">Register</button>
+
+</form>
+
+{% endblock %}

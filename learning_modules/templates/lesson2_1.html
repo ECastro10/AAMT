@@ -1,0 +1,51 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">First Scale! Chromatic Scale</h1>
+    <div class="lesson_wrapper">
+
+        <h3>What is a Scale?</h3>
+        <p>A scale is a group or collection of notes that follow a pattern.<br>
+            Suppose you have the numbers 1 - 10 and when you count past ten it just restarts the original numbers.<br>
+            <b>1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 1 - 2 - 3 - 4 - etc...</b><br>
+            Think of those as notes and we will build a scale that goes by 2's.<br>
+            <b>2 - 4 - 6 - 8 - 10</b><br>
+            You could also just build a chromatic scale by ascending one at a time like the original list and stopping at 10.<br>
+            Bam! Two scales, but not really because those are numbers.</p>
+
+        <h3>The Chromatic Scale</h3>
+
+        <p>So remember how in the first chapter there was an octave of all notes ascending?<br>
+            Guess what?! That is a chromatic scale.<br>
+            <b>C - (C#/Db) - D - (D#/Eb) - E - F - (F#/Gb) - G - (G#/Ab) - A - (A#/Bb) - B</b><br>
+            This works the same way up and down the scale.</p>
+
+        <h3>Chromatic Scale on the Guitar</h3>
+        <p>It is important to note that there variations to the scale patterns that are posted on this site.<br>
+            So, you can learn these patterns and/or other patterns, your choice.</p>
+
+        <div>
+            <img class="nat_img_size" src="{% static 'images/chromatic_scale.jpeg' %}">
+        </div>
+
+
+        <p>Alright let's dissect this scale pattern image. Each row of boxes is a string and each box on that row<br>
+            represents a fret. Our patterns will generally be <b>mobile</b> meaning that you can play them <b>anywhere on the<br>
+            fretboard so long as you have the frets available.</b><br>
+            That being said, the top most row is your 1st/high E string and the bottom most row is your 6th string/ low E string.<br>
+            I personally like to start from the 6th string and move up to the 1st string.<br>
+            <b>IMPORTANT NOTE: RED DOTS == ROOT NOTE, BLACK DOTS == OTHER NOTES IN THE SCALE</b><br>
+            When learning scales for the first time, start with the 6th/low E string and strike each note individually<br>
+            as close to the next fret without actually being on the fret. This pattern requires your attention at first<br>
+            because <b>you need to move your hand position down one fret when transitioning down or up these strings.</b><br>
+            <b>6th to 5th -- or -- 5th to 6th</b><br>
+            <b>5th to 4th -- or -- 4th to 5th</b><br>
+            <b>4th to 3th -- or -- 3th to 4th</b><br>
+            <b>2th to 1th -- or -- 1th to 2th</b><br>
+            This pattern is a two octave pattern as most of our patterns will be.<br>
+            Practice this pattern up and down everyday until you can do it at a moderate pace.</p>
+    </div>
+
+
+{% endblock %}

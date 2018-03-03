@@ -1,0 +1,49 @@
+{% extends 'base_layer.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center_title">Clefs, Staves, and Ledger Lines</h1>
+
+    <div class="lesson_wrapper">
+
+        <p>Alright, time to learn about some standard notation so that you can read and write down sheet music.<br>
+            What's the purpose for standard notation? It shows rhythm better than tab notation can and it<br>
+            it illustrates the relation between the notes.</p>
+        <h3>Clefs</h3>
+        <p>First and foremost, we will be studying primarily the treble class because the guitar range falls easily in this clef.<br>
+            Here are some but not all clefs.</p>
+        <div id="clefs">
+            <img class="nat_img_size" src="{% static 'images/clefs.jpg' %}">
+        </div>
+        <p>So the bottom most clef is known as the <b>f clef or bass clef.</b><br>
+            You can remember that it is an f-clef because the swirly bit begins on the line that is an f3.<br>
+            The next two clefs focus on the same note which is the c4 note. The one above the f clef is the tenor<br>
+            clef and the one above is the alto clef. The only difference between the two clefs is that the tenor<br>
+            clef is shifted down hence why the center line is an A4. And last but not least we have the clef that most<br>
+            guitar players call home, the g clef/ treble clef (notice how treble clef's skinny tail begins at g4).</p>
+        <p>Now that we understand what clefs are, let's focus on the lines and spacings</p>
+        <h3>Staff/Stave</h3>
+        <p>So the clef cannot exist without the staff/stave and vise versa. The clef gives the reader context<br>
+            and the staff/stave is the map on which to plot the appropriate notes.<br>
+            Staves are made of two things, lines and spaces. It is vital that you understand that the lines<br>
+            and spaces both represent notes.</p>
+        <div id="treble_clef">
+            <img class="nat_img_size" src="{% static 'images/TrebleClefNotes.jpg' %}">
+        </div>
+        <p>So you can use these shortcuts that the image shows to remember then but remember, this is just like learning<br>
+            to read, so give yourself time.<br>
+        Remember how the clefs above this image had notes that were above the normal staff, these little lines specifically<br>
+        used for these notes are known as <b>ledger lines</b></p>
+    <div id="ledger">
+        <img class="nat_img_size" src="{% static 'images/Ledger Line.GIF' %}">
+    </div>
+    <p>You will find these guys very useful as you write music.</p>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}
